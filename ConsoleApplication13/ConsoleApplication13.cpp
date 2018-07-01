@@ -298,19 +298,24 @@ int main()
 
 		} else if (numb == 12) {
 
-			int a, s=0;
+			int a,k, s=0;
 			
-			cout << endl << "a = ";
+			cout << endl << "число a = ";
 			cin >> a;
+			cout << "количество кратных чисел = ";
+			cin >> k;
 
-			for (int i = 1; i <= a; i++)
+			for (int i = 1; true; i++)
 			{
-				if (a % i == 0) {
-					cout << i << endl;
-					s++;
+				if (s < k) {
+					if (i % a == 0) {
+						cout << i << endl;
+						s++;
+					}
 				}
+				else break;
 			}
-			cout << "количество чисел, кратных " << a << " = " << s << endl << endl;
+			cout << endl;
 		}
 
 		else if (numb == 13) {
@@ -331,6 +336,7 @@ int main()
 			}
 			cout << endl;
 		}
+	
 	} while (true);
 
     return 0;
